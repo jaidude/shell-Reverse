@@ -1,0 +1,12 @@
+#!/bin/sh
+echo “Enter a number:” read n
+
+t=$n s=0
+
+while [ $n -gt 0 ] do
+
+r=`expr $n % 10` s=`expr $r + $s \* 10` n=`expr $n / 10`
+
+done
+
+echo “The reverse of the number $t is $s”
